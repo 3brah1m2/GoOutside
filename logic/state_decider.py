@@ -1,7 +1,8 @@
 import os
+from dotenv import load_dotenv
 from groq import Groq
 from logic.weather_data_extractor import WeatherDataExtractor
-
+load_dotenv()
 class StateDecider:
     def __init__(self):
         self.data = WeatherDataExtractor()
@@ -36,7 +37,7 @@ class StateDecider:
 
     def check_weather(self):
         client = Groq(
-        api_key=os.environ.get("GROQ_API_KEY"),
+        api_key=os.getenv("GROQ_API_KEY"),
         )
 
         chat_completion = client.chat.completions.create(
