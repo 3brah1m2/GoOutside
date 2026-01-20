@@ -3,6 +3,7 @@ from dotenv import load_dotenv
 from groq import Groq
 from logic.weather_data_extractor import WeatherDataExtractor
 load_dotenv()
+
 class StateDecider:
     def __init__(self):
         self.data = WeatherDataExtractor()
