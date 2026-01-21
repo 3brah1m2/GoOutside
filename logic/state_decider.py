@@ -10,7 +10,7 @@ class StateDecider:
         self.pm25 = self.data.get_pm25()
         self.current_weather = self.data.get_current_weather()
         self.PROMPT = f"""
-        Classify outdoor safety as one of: SAFE, CAUTION, UNSAFE.
+        Classify outdoor safety as one of: ✅ SAFE outside, ⚠️ CAUTION advised, 🚨 UNSAFE outside.
 
         Rules:
         - Use only the input data.
