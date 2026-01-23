@@ -2,9 +2,9 @@ name: Run Script 3 Times Daily
 
 on:
   schedule:
-    - cron: '0 8 * * *'   # 8:00 AM UTC
-    - cron: '0 14 * * *'  # 2:00 PM UTC
-    - cron: '0 20 * * *'  # 8:00 PM UTC
+    - cron: '0 3 * * *'   # 8:00 AM PKT (Pakistan Time)
+    - cron: '0 9 * * *'   # 2:00 PM PKT (Pakistan Time)
+    - cron: '0 15 * * *'  # 8:00 PM PKT (Pakistan Time)
   workflow_dispatch:
 
 jobs:
