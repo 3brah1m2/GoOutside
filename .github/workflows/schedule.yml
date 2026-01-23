@@ -1,10 +1,13 @@
 name: Run Script 3 Times Daily
 
 on:
+  push: 
+    branches:
+      - main
   schedule:
     - cron: '0 3 * * *'   # 8:00 AM PKT (Pakistan Time)
     - cron: '0 9 * * *'   # 2:00 PM PKT (Pakistan Time)
-    - cron: '25 15 * * *'  # 8:25 PM PKT (Pakistan Time)
+    - cron: '32 15 * * *'  # 8:25 PM PKT (Pakistan Time)
   workflow_dispatch:
 
 jobs:
